@@ -1,0 +1,6 @@
+---
+- blocking when queue empty using sleep + signals
+
+- fast/lockless message sending?
+  - async writes for sqlite?
+  - message inserts using temp table?

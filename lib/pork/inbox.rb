@@ -62,6 +62,12 @@ module Pork
           updated_at timestamp,
           deleted_at timestamp
         );
+
+        create index if not exists messages_key_index on messages (key);
+        create index if not exists messages_status_index on messages (status);
+        create index if not exists messages_created_at_index on messages (created_at);
+        create index if not exists messages_updated_at_index on messages (updated_at);
+        create index if not exists messages_deleted_at_index on messages (deleted_at);
       __
 
       fattr :inbox
